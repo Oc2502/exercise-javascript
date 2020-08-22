@@ -11,4 +11,7 @@ function removeCharacters(str) {
 }
 
 
+
 console.log(removeCharacters(string));
+
+// str slice => string.slice(where to start, the end). to count from the end, need wo write '-' . -1 
