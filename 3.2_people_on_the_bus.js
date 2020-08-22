@@ -11,3 +11,33 @@ Please keep in mind that the test cases ensure that the number of people in the 
 The second value in the first integer array is 0, since the bus is empty in the first bus stop.
 
 */
+
+
+let array =[ [ 1 , 0] , [ 2 , 1 ], [ 0 , 1 ] ];
+
+
+function numOfPeople(array) {
+    
+    if( array[0][1] === 0 ) {
+        let sum1 = array.map(stop => {
+            return stop[0] - stop[1]
+        });
+
+        let lastStop = sum1.reduce((acc, cur) => {
+          return acc + cur;
+        }, 0);
+
+        if (lastStop >= 0) {
+            console.log(lastStop);
+        } else {
+            console.log('something wrong');
+        }
+        
+
+    } else {
+        console.log(`people can't get off bus in the first stop!`);
+    }
+
+}
+
+numOfPeople(array)
