@@ -31,20 +31,24 @@ Note: Don't forget to convert the percent parameter as a percentage in the body 
 
 
 function whenPSurpass(p0, percent, aug, p) {
-    let percentNum = percent / 100;
-    let count = 0;
-    let population = p0;
+    if((p0 > 0) && (p > 0) && (percent >= 0)){
+        let percentNum = percent / 100;
+        let count = 0;
+        let population = p0;
 
-    while( population < p) {
-        population = population + parseInt(population * percentNum) + aug;
-        // console.log(population)
-        count ++
-        // console.log(count)
+        while( population < p) {
+            population = population + parseInt(population * percentNum) + aug;
+            console.log(population)
+            count ++
+            console.log(count)
 
+        }
+
+        console.log('in', count, 'years')
+    } else {
+        console.log('enter the rigth number of population ')
     }
-
-    console.log('in', count, 'years')
 
 }
 
-whenPSurpass(1500, 5, 100, 5000);
+whenPSurpass(1500, 0, 100, 5000);
