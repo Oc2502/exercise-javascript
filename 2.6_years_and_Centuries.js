@@ -13,23 +13,28 @@ centuryFromYear(2000)  returns (20)
 // this function is rigth only for ater year 0!!
 function centuryFromYear(year) {
     let century;
-    if(year % 100 === 0 ) {
-        century = year / 100 ;
+    if(year > 0){
+        if(year % 100 === 0 ) {
+            century = year / 100 ;
+        } else {
+            century = parseInt(year / 100) + 1;
+        }
+        console.log(century);
     } else {
-        century = parseInt(year / 100) + 1;
+        console.log(`can't find`);
     }
-    console.log(century);
 }
+        
 
-centuryFromYear(-101)
+centuryFromYear(851)
 
 
-// another option- more accurate function to find century !:
+// another option:
 
 //The Math.ceil() function always rounds a number up to the next largest integer.
 
-function century(year) {
-    return Math.ceil(year / 100);
-}
+// function century(year) {
+//     return Math.ceil(year / 100);
+// }
 
-console.log(century(-101));
+// console.log(century(851));
