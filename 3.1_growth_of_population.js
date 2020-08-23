@@ -51,4 +51,4 @@ function whenPSurpass(p0, percent, aug, p) {
 
 }
 
-whenPSurpass(1500, 0, 100, 5000);
+whenPSurpass(1000, 2, 50, 1500);

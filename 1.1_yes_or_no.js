@@ -3,6 +3,8 @@ Complete the method that takes a boolean value and return a "Yes" string for tru
 */
 
 boolean = false;
+/*
+
 
 function booleanToString(booleanValue) {
     if(booleanValue) {
@@ -10,5 +12,10 @@ function booleanToString(booleanValue) {
     }
     return 'No'
 }
+
+*/
+boolean.booleanToString(str) 
+
+ 
 
 console.log(booleanToString(boolean));
